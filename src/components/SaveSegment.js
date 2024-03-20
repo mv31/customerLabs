@@ -36,6 +36,7 @@ const SaveSegment = ({ openSegment, handlePopup }) => {
   const [selectedSchema, setSelectedSchema] = useState([]);
   const [formData, setFormData] = useState({});
   const [segmentName, setSegmentName] = useState();
+  const [response, setResponse] = useState(null);
 
   const handleschema = (e) => {
     const { value } = e?.target;
@@ -74,7 +75,6 @@ const SaveSegment = ({ openSegment, handlePopup }) => {
           console.log(filteredArray, "FILTERED");
           temp[i].options = filteredArray;
         }
-
       }
       setSelectedSchema(temp);
       setFormData({});
@@ -106,13 +106,33 @@ const SaveSegment = ({ openSegment, handlePopup }) => {
     setSelectedSchema(temp);
   };
 
-  const handleSaveSegment = () => {
+  const handleSaveSegment = async () => {
     const schemas = selectedSchema?.map((ele) => {
       let obj = {
         [ele?.value]: ele?.label,
       };
       return obj;
     });
+    try {
+      const url = "https://cors-anywhere.herokuapp.com/https://webhook.site/7ff7d42b-98a3-45b7-a398-aa08eb9ac77a";
+      const data = { ...segmentName, schema: schemas };
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "api-key":""
+        },
+        body: JSON.stringify(data),
+      });
+
+      const responseData = await response.json();
+      if (responseData) {
+        console.log(responseData,'RES');
+        setResponse(responseData);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
     console.log({ ...segmentName, schema: schemas });
   };
   useEffect(() => {

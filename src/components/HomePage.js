@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import SaveSegment from "./SaveSegment";
+import "./common.css"
 
 const HomePage = () => {
   const [openSegment, setOpenSegment] = useState(false);
@@ -14,7 +15,7 @@ const HomePage = () => {
   };
 
   return (
-    <div>
+    <div className="homeContainer">
       <h1>Customer Labs</h1>
       <button
         onClick={(e) => {
