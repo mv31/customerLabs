@@ -1,3 +1,145 @@
-.homeContainer{
+.homeContainer {
+    background-color: whitesmoke;
+    height: 25rem;
+    width: "100%";
+    margin: 20px 20px;
+    padding: 20px 20px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 30px;
+}
+
+.modalContainer {
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    width: 40rem;
+    height: 40rem;
+    margin: 10px;
+    padding: 10px;
+
+}
+
+.modal-dialog {
+    max-width: 600px;
+}
+
+.modal-content {
+    min-height: 300px;
+}
+
+.modalHeader {
+    background-color: lightskyblue;
+}
+
+.text {
+    margin: 10px;
+}
+
+.underline-button {
+    background-color: white;
+    border: none;
+    padding: 0;
+    margin: 10px;
+}
+
+.underline-text {
+    text-decoration: underline;
+    color: green;
+    margin-right: 5px;
+    margin: 2px;
+
+}
+
+.underline-button:hover {
+    background-color: transparent;
+    color: inherit;
+}
+
+.icon {
+    font-size: 16px;
+    color: green;
+}
+.icon1{
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.underline-button:hover .icon {
+    color: green;
+}
+
+.bottomButton {
+    width: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5px;
+}
+
+.red-dot {
+    top: 42%;
+    width: 10px;
+    height: 10px;
     background-color: red;
+    border-radius: 50%;
+    margin-left: 6px;
+    margin-top: 8px;
+
+}
+
+.segments {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Select-box {
+    margin: 5px;
+    width: 90%;
+}
+.segmentName{
+    margin: 5px;
+    width: 95%;
+}
+
+
+.green-dot {
+    margin-top: 8px;
+    top: 42%;
+    width: 12px;
+    height: 12px;
+    background-color: green;
+    border-radius: 50%;
+    margin-left: 6px;
+
+}
+
+.green-dot1 {
+    margin-top: 18px;
+    top: 42%;
+    width: 12px;
+    height: 12px;
+    background-color: green;
+    border-radius: 50%;
+    margin-left: 15px;
+
+}
+
+.traits {
+    display: flex;
+    justify-content: flex-end;
+    margin: 12px;
+}
+
+.user {
+    display: flex;
+    margin-left: 8px;
+
+}
+
+.group {
+    display: flex;
 }
