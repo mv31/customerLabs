@@ -11,6 +11,7 @@
     justify-content: center;
     text-align: center;
     margin: 30px;
+    font-weight: 700;
 }
 
 .modalContainer {
@@ -38,6 +39,8 @@
 
 .text {
     margin: 10px;
+    font-weight: 600;
+
 }
 
 .underline-button {
@@ -64,7 +67,8 @@
     font-size: 16px;
     color: green;
 }
-.icon1{
+
+.icon1 {
     margin-top: 15px;
     cursor: pointer;
 }
@@ -100,7 +104,8 @@
     margin: 5px;
     width: 90%;
 }
-.segmentName{
+
+.segmentName {
     margin: 5px;
     width: 95%;
 }
@@ -131,34 +136,45 @@
 .traits {
     display: flex;
     justify-content: flex-end;
-    margin: 12px;
+    margin: 13px;
+    font-weight: 600;
+
+}
+
+.card {
+    border: 3px solid rgb(97, 185, 225);
+    margin: 2px;
 }
 
 .user {
     display: flex;
-    margin-left: 8px;
+    margin-left: 10px;
 
 }
 
 .group {
     display: flex;
+    margin-left: 10px;
+
 }
 
-.cancelBtn{
+.cancelBtn {
     color: red;
     background-color: white;
     font-weight: 600;
 }
 
-.cancelBtn:hover{
+.cancelBtn:hover {
     color: red;
     background-color: rgb(252, 249, 249);
     font-weight: 600;
 }
-.saveBtn{
+
+.saveBtn {
     background-color: rgb(39, 140, 123);
 }
-.saveBtn:hover{
+
+.saveBtn:hover {
     background-color: rgb(27, 107, 93);
 
 }

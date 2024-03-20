@@ -178,7 +178,7 @@ const SaveSegment = ({ openSegment, handlePopup }) => {
     <div>
       <Form>
         <Form.Group controlId="formBasicInput">
-          <Form.Label className="text">
+          <Form.Label  className="text">
             Enter the Name of the Segment
           </Form.Label>
           <Form.Control
@@ -213,7 +213,7 @@ const SaveSegment = ({ openSegment, handlePopup }) => {
       {}
       <div>
         {selectedSchema?.length > 0 && (
-          <Card border="primary">
+          <Card className="card" >
             <Card.Body>
               {selectedSchema &&
                 selectedSchema?.map((schema, idx) => {
