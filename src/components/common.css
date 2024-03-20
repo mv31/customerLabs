@@ -143,3 +143,22 @@
 .group {
     display: flex;
 }
+
+.cancelBtn{
+    color: red;
+    background-color: white;
+    font-weight: 600;
+}
+
+.cancelBtn:hover{
+    color: red;
+    background-color: rgb(252, 249, 249);
+    font-weight: 600;
+}
+.saveBtn{
+    background-color: rgb(39, 140, 123);
+}
+.saveBtn:hover{
+    background-color: rgb(27, 107, 93);
+
+}

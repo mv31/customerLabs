@@ -3,7 +3,6 @@ import { Button, Card, Form, I } from "react-bootstrap";
 import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { BASE_URL } from "../utills/constants";
-import Toastify from "./Toastify";
 const SaveSegment = ({ openSegment, handlePopup }) => {
   const initialData = [
     {
@@ -76,7 +75,6 @@ const SaveSegment = ({ openSegment, handlePopup }) => {
               return !set.has(item?.value);
             }
           });
-          console.log(filteredArray, "FILTERED");
           temp[i].options = filteredArray;
         }
       }
@@ -111,7 +109,6 @@ const SaveSegment = ({ openSegment, handlePopup }) => {
 
   const handleRemove = (e, idx) => {
     e?.preventDefault();
-    console.log(idx, "DD");
     let temp = [...selectedSchema];
     temp?.splice(idx, 1);
     for (let i = 0; i < temp?.length; i++) {
@@ -303,6 +300,7 @@ const SaveSegment = ({ openSegment, handlePopup }) => {
       <div>
         <div className="bottomButton">
           <Button
+           className="saveBtn" 
             variant="primary"
             type="submit"
             onClick={(e) => {
@@ -311,9 +309,9 @@ const SaveSegment = ({ openSegment, handlePopup }) => {
             }}
             disabled={segmentName?.loading}
           >
-            Save Segment
+            Save the Segment
           </Button>
-          <Button variant="secondary" onClick={handlePopup}>
+          <Button variant="secondary" className="cancelBtn" onClick={handlePopup}>
             Cancel
           </Button>
         </div>
